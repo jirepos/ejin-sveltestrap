@@ -1,0 +1,41 @@
+<script context="module">
+  let modalElement; 
+  export function showElementInfo() {
+    console.log(modalElement);
+    let modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalElement.classList.remove("show"); 
+    // modalInstance.dispose();
+    modalInstance.hide();
+  }
+</script>
+
+<script>
+  import NewModalBody from './NewModalBody.svelte';
+  import NewModalHeader from './NewModalHeader.svelte';
+  import NewModalFooter from './NewModalFooter.svelte';
+
+  export let id = ''; 
+
+</script>
+
+<!-- Modal -->
+<div  bind:this={modalElement}  class="modal fade"   id="{id}" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <slot/>
+      <!-- <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+       <!-- <slot name="header"/> -->
+      <!-- <div class="modal-body"> -->
+        <!-- <slot name="body" /> -->
+      <!-- </div> -->
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+      <!-- <slot name="footer"/> -->
+    </div>
+  </div>
+</div>

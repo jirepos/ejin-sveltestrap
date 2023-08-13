@@ -1,0 +1,9 @@
+{
+  // a11y 경고 막기
+  "svelte.plugin.svelte.compilerWarnings": {
+    "a11y-click-events-have-key-events": "ignore",
+    "a11y-no-noninteractive-element-interactions": "ignore", 
+    "a11y-no-static-element-interactions":"ignore",
+    "a11y-media-has-caption": "ignore"
+  },
+}

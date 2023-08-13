@@ -1,0 +1,19 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist",
+    "target": "es2016",     
+    "module": "ES6",		
+		"allowJs": true,
+		"checkJs": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"moduleResolution": "NodeNext",
+		"noImplicitAny": false
+	},
+	"exclude": ["node_modules",  "dist"]
+}
